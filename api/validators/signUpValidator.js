@@ -23,3 +23,5 @@ const validateUser = [
     .isLength({ min: 10 })
     .withMessage("Password must be at least 10 characters."),
 ];
+
+module.exports = validateUser;
