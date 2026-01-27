@@ -1,4 +1,10 @@
+const passport = require("passport");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
+const LocalStrategy = require("passport-local").Strategy;
+const bcrypt = require("bcryptjs");
+const prisma = require("../lib/prisma");
+
+// Google Authenticate strategy
 
 passport.use(
   new GoogleStrategy(
@@ -14,3 +20,25 @@ passport.use(
     },
   ),
 );
+
+// Local authenticate strategy
+
+passport.use(
+  new LocalStrategy(async (username, password, done) => {
+    try {
+      const user = await prisma.user.findUnique({ where: { username } });
+      if (!user) return done(null, false, { message: "Incorrect username" });
+
+      const match = await bcrypt.compare(password, user.password_hash);
+      if (!match) return done(null, false, { message: "Incorrect password" });
+
+      return done(null, user);
+    } catch (err) {
+      return done(err);
+    }
+  }),
+);
+
+// JWT strategy
+
+module.exports = passport;
