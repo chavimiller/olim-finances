@@ -1,4 +1,6 @@
 const prisma = require("../lib/prisma");
+const { matchedData, validationResult } = require("express-validator");
+
 // post signUp
 
 function signUpPost(req, res) {
