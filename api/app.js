@@ -1,7 +1,9 @@
 const express = require("express");
 const app = express();
+const authRouter = require("./routes/authRouter");
 
-app.get("/", (req, res) => res.json("Hello, world!"));
+app.use("/", (req, res) => res.json());
+app.use("/auth", authRouter);
 
 const PORT = procces.env.PORT || 3000;
 app.listen(PORT, (error) => {
