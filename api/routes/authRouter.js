@@ -1,5 +1,6 @@
 const { Router } = require("express");
 const authRouter = Router();
+const passport = require("../config/googlePassport");
 const authController = require("../controllers/authController");
 const validateUser = require("../validators/signUpValidator");
 
@@ -7,7 +8,7 @@ authRouter.post("/signup", validateUser, authController.signUpPost);
 
 authRouter.get(
   "/google",
-  passport.authenticate("google", { scope: ["profile"] }),
+  passport.authenticate("google", { scope: ["profile", "email"] }),
 );
 
 authRouter.get(
@@ -19,7 +20,7 @@ authRouter.get(
   },
 );
 
-app.post(
+authRouter.post(
   "/login",
   passport.authenticate("local", { failureRedirect: "/login" }),
   function (req, res) {

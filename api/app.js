@@ -1,11 +1,12 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const authRouter = require("./routes/authRouter");
 
-app.use("/", (req, res) => res.json());
+app.get("/", (req, res) => res.json());
 app.use("/auth", authRouter);
 
-const PORT = procces.env.PORT || 3000;
+const PORT = 3000;
 app.listen(PORT, (error) => {
   // This is important!
   // Without this, any startup errors will silently fail
