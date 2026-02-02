@@ -5,9 +5,17 @@
   --offBlack: #5D576B;
 }
 
+@font-face {
+  font-family: "InstrumentSans";
+  src: url("./assets/fonts/InstrumentSans.ttf");
+} 
+
 #root {
+  font-family: "InstrumentSans";
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
+
+
