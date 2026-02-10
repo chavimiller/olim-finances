@@ -13,9 +13,78 @@
 #root {
   font-family: "InstrumentSans";
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
 
+.mainContainer {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.containerA {
+  background-color: var(--white);
+  height: 100vh;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.containerB {
+  background-color: var(--offBlack);
+  height: 100vh;
+  width: 45%;
+  display: flex;
+ 
+}
+
+.signInTitle {
+  color: var(--offBlack);
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+.googleIcon {
+  width: 50px;
+  height: 50px;
+  padding: 1rem;
+}
+
+h2 {
+  font-weight: 100;
+  color: var(--offBlack);
+  font-size: 1rem;
+  padding: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  align-items: center;
+}
+
+input {
+  width: 28rem;
+  height: 2.5rem;
+  border-radius: .3rem;
+  border: var(--offBlack) solid .1rem;
+}
+
+input::placeholder {
+  padding: 0 .5rem;
+  color: #5d576bb8;
+  font-weight: 100;
+
+}
