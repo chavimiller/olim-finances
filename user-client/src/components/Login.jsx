@@ -46,10 +46,18 @@ const Login = () => {
               id="confirmPass"
               placeholder="Confirm password"
             />
+            <div className="button2">
+              <button>Login</button>
+            </div>
           </form>
         </div>
 
-        <div className="containerB"></div>
+        <div className="containerB">
+          <h2 className="heading2">Don't have an account yet? </h2>
+          <div className="button1">
+            <button>Join today</button>
+          </div>
+        </div>
       </div>
     );
   }

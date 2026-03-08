@@ -1,8 +1,9 @@
 :root {
-  --primary: #607196;
-  --secondary: #E2FEFF;
+  --primary: #515B3A;
+  --secondary: #6BA368;
   --white: #FFFFFF;
-  --offBlack: #5D576B;
+  --offBlack: #353D2F;
+  --offWhite: #F6FFF5;
 }
 
 @font-face {
@@ -41,11 +42,13 @@ body {
 }
 
 .containerB {
-  background-color: var(--offBlack);
+  background-color: var(--primary);
   height: 100vh;
   width: 45%;
   display: flex;
- 
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .signInTitle {
@@ -87,4 +90,48 @@ input::placeholder {
   color: #5d576bb8;
   font-weight: 100;
 
+}
+
+.heading2 {
+  display: flex;
+  color: var(--white);
+  font-size: 3.5rem;
+  max-width: 15rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+.button1 {
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--offWhite);
+  border-radius: 25px;
+  width: 6rem;
+  height: 2rem;
+  padding: 8px 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.button2 {
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--offBlack);
+  border-radius: 25px;
+  width: 6rem;
+  height: 2rem;
+  padding: 8px 10px;
+  text-align: center;
+  cursor: pointer;
 }
