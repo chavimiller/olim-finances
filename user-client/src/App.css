@@ -61,6 +61,7 @@ body {
   width: 50px;
   height: 50px;
   padding: 1rem;
+  cursor: pointer;
 }
 
 h2 {
@@ -81,15 +82,16 @@ form {
 input {
   width: 28rem;
   height: 2.5rem;
+  padding: 2px 20px; 
   border-radius: .3rem;
   border: var(--offBlack) solid .1rem;
 }
 
 input::placeholder {
   padding: 0 .5rem;
-  color: #5d576bb8;
+  color: var(--primary);
   font-weight: 100;
-
+ font-family: "InstrumentSans";
 }
 
 .heading2 {
@@ -106,6 +108,10 @@ button {
   margin: 0;
   padding: 0;
   background-color: transparent;
+  font-family: "InstrumentSans";
+  font-size: .9rem;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 .button1 {
@@ -122,6 +128,14 @@ button {
   cursor: pointer;
 }
 
+.button1 > button {
+  color: var(--primary)
+}
+
+.button2 > button {
+  color: var(--white)
+}
+
 .button2 {
   color: var(--white);
   display: flex;
@@ -129,9 +143,10 @@ button {
   justify-content: center;
   background-color: var(--offBlack);
   border-radius: 25px;
-  width: 6rem;
+  width: fit-content;
+  min-width: 6rem;
   height: 2rem;
-  padding: 8px 10px;
+  padding: 8px 16px;
   text-align: center;
   cursor: pointer;
 }
